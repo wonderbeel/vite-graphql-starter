@@ -1,0 +1,14 @@
+overwrite: true
+schema: ${VITE_GRAPHQL_ENDPOINT}
+documents: "src/graphql/**/*.graphql"
+generates:
+  src/graphql/types.ts:
+    plugins:
+      - "typescript"
+  src/graphql/schema.json:
+    plugins:
+      - "introspection"
+  src/graphql/urql.ts:
+    plugins:
+      - "typescript-operations"
+      - "typescript-vue-urql"
