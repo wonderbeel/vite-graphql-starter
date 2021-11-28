@@ -10,6 +10,7 @@ import path from 'path'
 import presetIcons from '@unocss/preset-icons'
 import { defineConfig } from 'vite'
 import { presetAttributify, presetUno } from 'unocss'
+import { brotliCompressSync } from 'zlib'
 
 // https://vitejs.dev/config/
 export default defineConfig({
